@@ -1,0 +1,43 @@
+<!-- 这里配置装饰器里要加载的css资源 -->
+<%- include('../layout/head.html', 
+            {cssRes: {
+                        pubLib:[
+                            '/staticPcCss/defaultPc.css',
+                            '/staticPcCss/reset.css'
+                        ],
+                        bizLib:[
+                            '/bizPc/page/commonPC.css'
+                        ]
+                    }
+            }
+); %>
+
+<ul class="comm-list">
+    <li class="comm-item">
+        <h1 class="comm-title" id="cm-txt-ellipsis">1、<b>.cm-txt-ellipsis</b>一行文字溢出用省略号代替</h1>
+        <div></div>
+        <pre>
+            .cm-txt-ellipsis{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        </pre>
+        <div class=".cm-txt-ellipsis">
+            
+        </div>
+    </li>
+</ul>
+
+<!-- 这里配置装饰器里要加载的js资源 -->
+<%- include('../layout/foot.html', 
+            {jsRes: {
+                        pubLib:[
+                            '/staticPcJs/jquery.min.js'
+                        ],
+                        bizLib:[
+                            '/bizPc/page/commonPC.js'
+                        ]
+                    }
+            }
+); %>

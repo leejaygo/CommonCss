@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CommonCss</title>
+    <meta name="keywords" content="css，css样式，通用css样式，css hack，盒子模型">
+    <meta name="description" content="css通用样式，经常用到的css样式，解决css的样式问题">
+    <% cssRes.pubLib.forEach(function (item){%>
+    <link rel="stylesheet" type="text/css" href="<%= item %>">
+    <% }); %>
+    <% cssRes.bizLib.forEach(function (item){ %>
+    <link rel="stylesheet" type="text/css" href="<%= item %>">
+    <% }); %>
+</head>
+<body>
