@@ -13,8 +13,9 @@
 ); %>
 
 <ul class="comm-list">
+<% for(var i = 0; i < data.length; i++){ %>
     <li class="comm-item">
-        <h1 class="comm-title" id="cm-txt-ellipsis">1、<b>.cm-txt-ellipsis</b>一行文字溢出用省略号代替</h1>
+        <h1 class="comm-title" id="cm-txt-ellipsis"><% data[i]['RowDataPacket'].cid %>、<b>.cm-txt-ellipsis</b>一行文字溢出用省略号代替</h1>
         <div></div>
         <pre>
             .cm-txt-ellipsis{
@@ -23,10 +24,8 @@
                 white-space: nowrap;
             }
         </pre>
-        <div class=".cm-txt-ellipsis">
-            
-        </div>
     </li>
+<% } %>
 </ul>
 
 <!-- 这里配置装饰器里要加载的js资源 -->

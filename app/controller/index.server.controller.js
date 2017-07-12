@@ -1,5 +1,7 @@
+var bll = require('../../bll/content');
 module.exports = {
-	render: function (req, res){
-		res.render('pc/page/commonPC');
+	renderPage: function (obj, req, res, next){
+		var datas = bll.getContents();
+		res.render('pc/page/commonPC',datas);
 	}
 }

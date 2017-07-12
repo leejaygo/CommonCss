@@ -1,4 +1,5 @@
 var express = require('express');
+var router = express.Router();
 var expressStatic = require('express-static');
 var path = require('path');
 var morgan = require('morgan');//记录日志
@@ -14,7 +15,6 @@ module.exports = function (){
 	}else if(process.env.NODE_ENV == 'production'){
 	    app.use(compress());
 	}
-
 
 	app.use(bodyParser.urlencoded({
         extended: true
